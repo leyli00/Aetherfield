@@ -209,10 +209,27 @@
 
 .features_content {
     display: flex;
+    gap: 40px;
 }
 
 .features_right_list ul li {
     list-style: none;
+}
+
+.features_right_list_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+    width: 767px;
+    height: 502px;
+}
+
+.features_right_list ul {
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
 }
 
 .feat_ul_li1 {
@@ -243,7 +260,147 @@
 }
 
 .feat_ul_li_p {
-    font-family: "Source Serif Pro: Regular", sans-serif;
+    font-family: "Source Serif Pro", sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+}
+
+/* Values section */
+
+.values_section {
+    position: relative;
+    height: 694px;
+    width: 100%;
+}
+
+.values_sec_bgk {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.values_content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 120px 20px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.values_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.val_sec_h2_1 {
+    font-family: "Source Serif Pro", sans-serif;
+    line-height: 1;
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    margin: 0;
+}
+
+.val_sec_h2_2 {
+    font-family: "Radio Canada Big";
+    font-size: 80px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    margin: 0;
+}
+
+.values_modules {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    max-width: 1500px;
+}
+
+.values_module {
+    /*width: 402px;*/
+    background-color: white;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1 0 0px;
+}
+
+.value_module_content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.value_module_img {
+    width: 42px;
+    height: 42px;
+}
+
+.value_module_content h2 {
+    font-family: "Radio Canada Big";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.value_module_content p {
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+    margin: 0;
+}
+
+/* Case study section */
+
+.case_study_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 150px;
+}
+
+.case_study_content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.case_study_module {
+    height: 320px;
+    width: 980px;
+    border-radius: 20px;
+    background-color: #F6F8FB;
+    display: flex;
+    padding: 20px;
+    gap: 40px;
+    flex-direction: row;
+}
+
+.case_study_content_text_header {
+    font-family: "Radio Canada Big";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.case_study_content_text_p {
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: -0.04em;
