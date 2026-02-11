@@ -135,6 +135,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+
 }
 
 
@@ -176,6 +177,7 @@
     gap: 16px;
     font-family: "Geist Mono", monospace;
     justify-content: center;
+    align-items: center;
 }
 
 .intro_btns button {
@@ -199,6 +201,11 @@
     margin: 0;
 }
 
+.intro_hero_img_div {
+    max-width: 960px;
+    max-height: 608px;
+}
+
 
 /* Features section */
 
@@ -209,6 +216,7 @@
     justify-content: center;
     gap: 40px;
     padding: 120px 20px;
+    /* max-width: 1500px;*/
 }
 
 .features_header {
@@ -217,7 +225,7 @@
     font-weight: 500;
     letter-spacing: -1.2px;
     line-height: 1;
-    width: 612px;
+    max-width: 612px;
     margin: 0;
     text-align: center;
 }
@@ -225,7 +233,19 @@
 .features_content {
     display: flex;
     gap: 40px;
+    max-width: 1500px;
     line-height: 0;
+    width: 100%;
+}
+
+.features_left_img {
+    width: 50%;
+}
+
+.features_left_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .features_right_list ul li {
@@ -246,8 +266,9 @@
     gap: 24px;
     padding: 0;
     margin: 0;
-    width: 767px;
-    height: 502px;
+    width: 50%;
+    /* width: 767px;
+    height: 502px;*/
 }
 
 .features_right_list ul {
@@ -407,11 +428,12 @@
     justify-content: center;
     flex-direction: column;
     gap: 24px;
+    width: 50%;
 }
 
 .case_study_module {
-    height: 320px;
-    width: 980px;
+    /*height: 320px;*/
+    max-width: 980px;
     border-radius: 20px;
     background-color: #F6F8FB;
     display: flex;
@@ -423,6 +445,15 @@
 /*.case_study_module_img_div {
     background: url("/img/case_study.svg");
 }*/
+.case_study_module_img_div {
+    width: 50%;
+}
+
+.case_study_img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 
 .case_study_module img {
     flex: 1 0 0px;
@@ -436,7 +467,7 @@
 
 .case_study_content_text_header {
     font-family: "Radio Canada Big";
-    font-weight: 400;
+    font-weight: 500;
     font-size: 20px;
     line-height: 1;
     letter-spacing: -0.3px;
@@ -470,9 +501,13 @@
     margin: 0;
 }
 
+.article_body {
+    max-width: 620px;
+}
+
 .journal_item {
     border-top: 1px solid #DBE0EC;
-    width: 620px;
+    /*width: 620px;*/
     padding: 24px 0px;
 }
 
@@ -535,26 +570,28 @@
 
 .testimonial_img_div {
     position: relative;
-    flex: 1 0 0px;
+    /*flex: 1 0 0px;*/
     display: block;
+    width: 50%;
 }
 
 .testimonial_img {
     display: block;
     height: 100%;
-    width: 742px;
+    width: 100%;
     object-fit: cover;
-    flex: 1 0 0px;
+    /*flex: 1 0 0px;*/
 }
 
 .testimonial_quote {
     display: flex;
-    flex: 1 0 0px;
+    /*flex: 1 0 0px;*/
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding: 0px 105px;
     gap: 56px;
+    width: 50%;
 }
 
 .testimonial_quote_text {
@@ -679,6 +716,8 @@
 
 /*----------- Responsive -----------*/
 
+/* Tablet */
+
 @media(max-width:1279px) {
     .intro_header {
         padding: 0px 0px 4px;
@@ -723,12 +762,17 @@
     .features_header {
         text-align: center;
         font-size: 32px;
-        width: 612px;
     }
 
     .features_right_list_btn {
         width: 100%;
     }
+
+    .features_left_img {
+        width: 100%;
+    }
+
+
 
     .features_left_img img {
         width: 100%;
@@ -783,8 +827,8 @@
     }
 
     .case_study_img {
-        width: 450px;
-        height: 280px;
+        /*width: 450px;
+        height: 280px;*/
         object-fit: cover;
         border-radius: 8px;
     }
@@ -792,10 +836,15 @@
 
     /* Blog section */
 
+    .blog_section {
+        padding: 40px 20px 0px;
+    }
+
     .blog_sec_header {
         font-size: 32px;
-        letter-spacing: -0.03em;
+        letter-spacing: -1.2px;
     }
+
 
     /* Testimonial section */
 
@@ -805,6 +854,8 @@
 
     .testimonial_quote_text {
         font-size: 32px;
+        letter-spacing: -1.2px;
+        font-weight: 400;
     }
 
     .testimonial_quote {
@@ -825,5 +876,259 @@
     .call_action_header {
         font-size: 32px;
         letter-spacing: -1.2px;
+    }
+}
+
+
+/* Mobil */
+
+@media(max-width:800px) {
+
+    /* Home page */
+
+    .intro {
+        padding: 120px 20px 0px;
+        gap: 32px;
+    }
+
+    .intro_section {
+        /*margin-top: 80px;*/
+        gap: 24px;
+        max-width: 480px;
+    }
+
+    .intro_header_text {
+        gap: 12px;
+    }
+
+    .intro_header h1 {
+        font-size: 36px;
+    }
+
+    .intro_header h2 {
+        font-size: 36px;
+        letter-spacing: -4px;
+    }
+
+    .intro_text {
+        letter-spacing: -0.8px;
+        font-size: 18px;
+    }
+
+    .intro_section .intro_btns {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .intro_hero_img_div {
+        max-width: 445px;
+    }
+
+    .intro_hero_img {
+        width: 100%;
+    }
+
+    .gradient_bgk_div {
+        height: 564.11px;
+    }
+
+    .gradient_bgk_img {
+        height: 100%;
+    }
+
+    /* Features section */
+    .features_section {
+        padding: 40px 20px;
+        gap: 24px;
+    }
+
+    .features_header {
+        font-size: 24px;
+        letter-spacing: -1.2px;
+    }
+
+    .features_left_img {
+        width: 100%;
+    }
+
+    .features_left_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .feat_ul_li_div {
+        gap: 12px;
+        padding: 20px 0px;
+    }
+
+    .feat_ul_h2 {
+        font-size: 18px;
+    }
+
+    .feat_ul_li_p {
+        font-size: 18px;
+    }
+
+    /* Values section */
+
+    .values_content {
+        padding: 40px 20px;
+        gap: 32px;
+    }
+
+    .val_sec_h2_1 {
+        font-size: 36px;
+        letter-spacing: -3.2px;
+    }
+
+    .val_sec_h2_2 {
+        font-size: 36px;
+        letter-spacing: -4px;
+    }
+
+    /* Case section */
+
+    .case_study_section {
+        padding: 40px 20px;
+    }
+
+    .case_study_module {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .case_study_module_img_div {
+        width: 100%;
+    }
+
+    .case_study_content {
+        width: 100%;
+    }
+
+    .case_study_content_text {
+        gap: 12px;
+    }
+
+    .case_study_content_text_header {
+        font-size: 18px;
+        letter-spacing: -0.4px;
+    }
+
+    .case_study_content_text_p {
+        font-size: 18px;
+        letter-spacing: -0.8px;
+    }
+
+    .case_study_content .intro_btns {
+        width: 100%;
+    }
+
+    .case_study_content .intro_btns button {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Blog section */
+
+    .blog_section {
+        padding: 0px 20px;
+        gap: 24px;
+    }
+
+    .blog_sec_header {
+        font-size: 24px;
+    }
+
+    /* Journal section */
+
+    .journal_content {
+        flex-direction: column;
+    }
+
+    .role_detail_header_p {
+        font-size: 18px;
+    }
+
+    .jornal_list .journal_item_btn button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .testimonial_section {
+        padding: 40px 20px;
+    }
+
+    .testimonial_content {
+        width: 100%;
+        flex-direction: column;
+        gap: 32px;
+        padding: 0;
+    }
+
+    .testimonial_img_div {
+        width: 100%;
+    }
+
+    .testimonial_quote {
+        padding: 0;
+        width: 100%;
+        gap: 24px;
+    }
+
+    .testimonial_quote_text {
+        font-size: 24px;
+        letter-spacing: -1.2px;
+    }
+
+    .testimonial_quote_role {
+        font-size: 18px;
+    }
+
+    /* Call to action */
+
+    .call_to_action_section {
+        padding: 40px 20px;
+    }
+
+    .call_action_header {
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: -1.2px;
+    }
+
+    .footer_section {
+        padding: 40px 20px 20px;
+        gap: 16px;
+    }
+
+    .footer_header {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .footer_nav_items {
+        gap: 16px;
+    }
+
+    .footer_nav_items a {
+        font-size: 18px;
+    }
+
+    .footer_header_right {
+        font-size: 18px;
+    }
+
+    .footer_image_div {
+        height: 120px;
+        width: 100%;
+    }
+
+    .footer_img {
+        height: 100%;
+        width: 100%;
     }
 }
