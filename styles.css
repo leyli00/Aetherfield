@@ -67,6 +67,15 @@
 
 
 /* Header */
+
+#checkbox {
+    display: none;
+}
+
+.logo label {
+    display: none;
+}
+
 .navigation {
     display: flex;
     width: 100%;
@@ -186,6 +195,8 @@
     color: white;
     border: none;
     padding: 16px;
+    align-items: center;
+    justify-content: center;
 }
 
 .intro_btns button img {
@@ -317,7 +328,7 @@
 
 .values_section {
     background: url("/img/Values\ section.png");
-    position: relative;
+    /*position: relative;*/
     height: 100%;
     width: 100%;
 }
@@ -562,14 +573,14 @@
 
 .testimonial_content {
     display: flex;
-    position: relative;
+    /*position: relative;*/
     gap: 16px;
     max-width: 1500px;
     flex: 1 0 0px;
 }
 
 .testimonial_img_div {
-    position: relative;
+    /*position: relative;*/
     /*flex: 1 0 0px;*/
     display: block;
     width: 50%;
@@ -607,7 +618,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 402px;
+    /*width: 402px;*/
 }
 
 .testimonial_quote_name_role p {
@@ -882,9 +893,88 @@
 
 /* Mobil */
 
-@media(max-width:800px) {
+@media screen and (max-width:800px) {
 
     /* Home page */
+
+    /* Hamburger bar */
+
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        /*background-color: white;*/
+    }
+
+    .navigation .logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        line-height: 0;
+    }
+
+    .navigation .logo label {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+
+    .navigation .logo label::before {
+        position: absolute;
+        content: "";
+        inset: 0;
+        background: url("/img/menu_icon_plus.svg") center/contain no-repeat;
+        top: 0;
+        left: 0;
+    }
+
+    .nav_items {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0px;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.25s;
+    }
+
+    .nav_a {
+        padding: 24px 0px;
+        font-size: 24px;
+        justify-content: flex-start;
+        /*letter-spacing: -0.1728px;*/
+        width: 100%;
+        line-height: 1;
+        font-weight: 400;
+        border-bottom: 1px solid #dbe0ec;
+    }
+
+    #get_started {
+        background-color: black;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        font-family: "Geist Mono", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 24px;
+    }
+
+    .nav_arrow_svg {
+        display: none;
+    }
+
+    #checkbox:checked~.nav_items {
+        max-height: 500px;
+    }
+
+    #checkbox:checked~.logo label::before {
+        background-image: url("https://need-spiny-01266573.figma.site/_assets/v11/d44c97942079b5dd185c1af8c302dd4512535acc.svg");
+    }
 
     .intro {
         padding: 120px 20px 0px;
@@ -921,9 +1011,9 @@
         gap: 12px;
     }
 
-    .intro_hero_img_div {
+    /*.intro_hero_img_div {
         max-width: 445px;
-    }
+    }*/
 
     .intro_hero_img {
         width: 100%;
@@ -986,6 +1076,10 @@
     .val_sec_h2_2 {
         font-size: 36px;
         letter-spacing: -4px;
+    }
+
+    .value_module_content {
+        margin-bottom: 0;
     }
 
     /* Case section */
@@ -1114,8 +1208,11 @@
         gap: 16px;
     }
 
-    .footer_nav_items a {
+    .footer_header .footer_nav_items .nav_a {
         font-size: 18px;
+        border-bottom: none;
+        padding: 0;
+        width: fit-content;
     }
 
     .footer_header_right {
