@@ -981,6 +981,10 @@
         gap: 32px;
     }
 
+    .intro_header {
+        padding: 0;
+    }
+
     .intro_section {
         /*margin-top: 80px;*/
         gap: 24px;
@@ -1011,9 +1015,9 @@
         gap: 12px;
     }
 
-    /*.intro_hero_img_div {
-        max-width: 445px;
-    }*/
+    .intro_hero_img_div {
+        line-height: 0;
+    }
 
     .intro_hero_img {
         width: 100%;
@@ -1036,6 +1040,10 @@
     .features_header {
         font-size: 24px;
         letter-spacing: -1.2px;
+    }
+
+    .features_content {
+        gap: 24px;
     }
 
     .features_left_img {
@@ -1095,6 +1103,7 @@
 
     .case_study_module_img_div {
         width: 100%;
+        line-height: 0;
     }
 
     .case_study_content {
